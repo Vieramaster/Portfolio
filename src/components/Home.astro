@@ -3,10 +3,10 @@ import ButtonContact from "../components/ButtonContact.astro";
 
 //social icos
 
-import LinkedIn from "../icons/SocialIcons/IcoLinkedIn.astro";
-import Github from "../icons/SocialIcons/IcoGithub.astro";
-import Discord from "../icons/SocialIcons/IcoDiscord.astro";
-import Instagram from "../icons/SocialIcons/IcoInstagram.astro";
+import IcoLinkedIn from "../icons/SocialIcons/IcoLinkedIn.astro";
+import IcoGithub from "../icons/SocialIcons/IcoGithub.astro";
+import IcoTelegram from "../icons/SocialIcons/IcoTelegram.astro";
+import IcoInstagram from "../icons/SocialIcons/IcoInstagram.astro";
 
 //misc icos
 
@@ -36,33 +36,63 @@ const classHomeSocial =
       <ButtonContact />
     </div>
   </div>
-  <div
-    class="w-1/2 h-full flex items-end justify-end place-content-center relative mb-16"
-  >
-    <img src="" alt="" />
-    <div class="flex flex-col h-3/4 justify-end">
-      <div class="bg-third-color w-2 h-64 mx-auto shadow-custom-shadow"></div>
-      <ul class="flex flex-col gap-2 mt-5">
+  <div class="w-1/2 h-full flex justify-between">
+    <div class="w-full h-screen flex items-center justify-center ">
+      <img
+        src="photo.webp"
+        alt="Profile photo"
+        class="border-solid border-4 border-third-color h-1/2 w-2/5"
+      />
+    </div>
+
+    <div class="flex flex-col h-screen justify-end mr-0 mb-10">
+      <span class="bg-third-color w-2 h-64 mx-auto shadow-custom-shadow"></span>
+      <ul class="flex flex-col gap-2 mt-5 mb-10">
         <li>
-          <a href="#" class="group">
-            <LinkedIn class={classHomeSocial + " hover:stroke-third-color"} />
+          <a
+            href="https://www.linkedin.com/in/martin-rodrigo-viera-royer-98a45328a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group"
+          >
+            <IcoLinkedIn
+              class={classHomeSocial + " hover:stroke-third-color"}
+            />
           </a>
         </li>
         <li>
-          <a href="" class="group">
-            <Github class={classHomeSocial + " hover:fill-third-color"} />
+          <a
+            href="https://github.com/Vieramaster"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group"
+          >
+            <IcoGithub class={classHomeSocial + " hover:fill-third-color"} />
           </a>
         </li>
+
         <li>
-          <a href="" class="group">
-            <Discord class={classHomeSocial + " hover:fill-third-color"} />
-          </a>
-        </li>
-        <li>
-          <a href="#" class="group">
-            <Instagram
+          <a
+            href="https://www.instagram.com/martin_viera90/ "
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group"
+          >
+            <IcoInstagram
               class={classHomeSocial + " hover:fill-third-color"}
               aria-hidden="true"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/martin_viera90/ "
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group"
+          >
+            <IcoTelegram
+              class={classHomeSocial + " hover:stroke-third-color"}
             />
           </a>
         </li>
@@ -70,7 +100,7 @@ const classHomeSocial =
     </div>
   </div>
 
-  <a href="#Skills/About" class="absolute bottom-0 left-1/2" name="scroll"
+  <a href="#Skills/About" class="absolute bottom-0 left-1/2" aria-label="scroll"
     ><IcoArrowDown /></a
   >
 </section>

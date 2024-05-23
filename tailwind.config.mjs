@@ -4,6 +4,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  
   theme: {
     extend: {
       boxShadow: {
@@ -16,6 +17,7 @@ module.exports = {
         "primary-color": "#34353a",
         "secondary-color": "#3d3e42",
         "third-color": "#ffc86a",
+        "fourth-color": "#3d3e42",
         "primary-font": "#e5e5e6",
         "secondary-font": "#000000",
       },
@@ -37,19 +39,14 @@ module.exports = {
             borderColor: "white",
           },
         },
-        scrolling: {
-          "0%": {
-            borderBottom: "transparent",
-          },
-          "100%": {
-            borderBbottom: "4px solid #ffc86a",
-          },
-        },
       },
       animation: {
         typing: "typing 2s steps(25), blink 1s infinite",
-        scroll: "scrolling ease-in 1s",
       },
     },
   },
+  plugins: [
+    // ...
+    require("tailwind-scrollbar")
+  ],
 };

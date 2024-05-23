@@ -14,7 +14,7 @@ const { name, text, image, linkProyect, linkGithub } = Astro.props;
 
 <div class="w-3/4 h-80 bg-secondary-color rounded-md flex my-20  overflow-hidden">
 
-  <a class=" h-full w-96 overflow-hidden cursor-pointer " href={linkProyect}  target="_blank" rel="noopener noreferrer">
+  <a class=" h-full w-96 overflow-hidden cursor-pointer " href={linkProyect}  target="_blank" rel="noopener noreferrer" aria-label="link">
     <img class="h-full  hover:scale-105 duration-300 ease-in-out" src=`${image}` alt=`${name}` />
   </a>
   <div class="flex flex-col mt-5 ml-5 w-3/5 px-10 py-5">
@@ -27,10 +27,10 @@ const { name, text, image, linkProyect, linkGithub } = Astro.props;
       {text}
     </p>
     <div class="flex gap-4 pb-2 items-center">
-      <a href={linkProyect} target="_blank" rel="noopener noreferrer">
+      <a href={linkProyect} target="_blank" rel="noopener noreferrer" aria-label="Link to Proyect">
         <Link />
       </a>
-      <a href={linkGithub} target="_blank" rel="noopener noreferrer">
+      <a href={linkGithub} target="_blank" rel="noopener noreferrer" aria-label="Link to Github">
         <Github class="w-10" />
       </a>
     </div>

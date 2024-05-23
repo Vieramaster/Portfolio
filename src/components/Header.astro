@@ -48,7 +48,7 @@
 
   window.addEventListener("scroll", () => {
     const topDistance = window.scrollY;
-    const opacity = Math.min(topDistance / 500, 1);
+    const opacity = Math.min(topDistance / 500, 0.5);
     header.style.borderBottom = `4px solid rgba(255, 200, 106, ${opacity})`;
   });
 </script>
