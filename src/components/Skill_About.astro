@@ -1,0 +1,70 @@
+---
+//Tech icos
+import IcoHTMLA from "../icons/IconsA/IcoHTMLA.astro";
+import IcoCSS3A from "../icons/IconsA/IcoCSS3A.astro";
+import IcoJavasCriptA from "../icons/IconsA/IcoJavasCriptA.astro";
+import IcoReactA from "../icons/IconsA/IcoReactA.astro";
+import IcoAstroA from "../icons/IconsA/IcoAstroA.astro";
+import IcoTailwindA from "../icons/IconsA/IcoTailwindA.astro";
+import IcoReactNativeA from "../icons/IconsA/IcoReactNativeA.astro";
+import IcoTypesCriptA from "../icons/IconsA/IcoTypesCriptA.astro";
+const ClassSkillsGlobal =
+  " flex justify-center [&>span]:bg-secondary-color [&>span]:h-28 [&>span]:w-28 flex gap-20 [&>span]:grid [&>span]:place-content-center [&>span]:rounded-md";
+
+const ClassIconsA = "hover:scale-125 ease-in-out duration-200";
+---
+
+<section
+  id="Skills/About"
+  class="h-[calc(100vh-7rem)] w-5/6 m-auto flex align items-center justify-between flex-col"
+>
+  <section class="mt-44">
+    <h2 class="text-6xl font-bold">About</h2>
+
+    <article class="mt-4 flex gap-4">
+      <div class="w-40 h-1 bg-third-color mt-2"></div>
+      <p class="text-xl">
+        From Argentina, Mar del Plata, I’m a passionate frontend developer with
+        a love for turning ideas into functional, user-friendly web experiences.
+        Programming isn’t just a hobby—it’s a rewarding journey of continuous <span
+          class="text-third-color"
+          >learning, problem-solving, and creativity</span
+        >. I thrive on challenges and aspire to contribute my skills to
+        meaningful projects. Let’s build something great together!
+      </p>
+    </article>
+  </section>
+  <div>
+    <h2 class="text-4xl font-bold text-center mb-10">Skills</h2>
+    <div class={ClassSkillsGlobal}>
+      <span>
+        <IcoHTMLA class={ClassIconsA} />
+      </span>
+      <span>
+        <IcoCSS3A class={ClassIconsA} />
+      </span>
+      <span>
+        <IcoJavasCriptA class={ClassIconsA} />
+      </span>
+      <span>
+        <IcoReactA class={ClassIconsA} />
+      </span>
+      <span>
+        <IcoTailwindA class={ClassIconsA} />
+      </span>
+      <span>
+        <IcoAstroA class={ClassIconsA} />
+      </span>
+    </div>
+  </div>
+  <div>
+    <h2 class="text-4xl font-bold text-center mb-10">
+      I am interested in learning
+    </h2>
+
+    <div class={ClassSkillsGlobal}>
+      <span> <IcoReactNativeA class={ClassIconsA} /></span>
+      <span> <IcoTypesCriptA class={ClassIconsA} /> </span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+<header
+  id="header"
+  class="w-screen m-auto h-28 flex align items-center justify-around fixed z-50 bg-primary-color border-blue-100-"
+>
+  <img src="logo.webp" alt="logo" class="h-12" />
+
+  <nav class="flex flex-grow-0 place-content-center">
+    <ul class="flex text-2xl [&>li>a]:inline-block [&>li>a]:px-6 [&>li>a]:py-3">
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#Skills/About">Skills / About</a></li>
+      <li><a href="#Proyects">Proyects</a></li>
+    </ul>
+    <span
+      id="menu-backdrop"
+      class={`absolute bg-secondary-color backdrop-blur-lg
+        left-[var(--left)] top-[var(--top)]
+        w-[var(--width)] h-[var(--height)]
+        transition-all duration-300
+        ease-in-out  opacity-0 -z-10 rounded-md`}
+    >
+    </span>
+  </nav>
+
+  <span class="relative w-28 h-14 animate-scroll"></span>
+</header>
+
+<script>
+  const listItem = document.querySelectorAll("#header li");
+  const menuBackDrop = document.querySelector("#menu-backdrop") as HTMLElement;
+  const header = document.querySelector("#header") as HTMLElement;
+
+  listItem.forEach((item) => {
+    item.addEventListener("mouseenter", (event) => {
+      const { left, top, width, height } = event.target.getBoundingClientRect();
+      menuBackDrop.style.setProperty("--left", `${left}px`);
+      menuBackDrop.style.setProperty("--top", `${top}px`);
+      menuBackDrop.style.setProperty("--width", `${width}px`);
+      menuBackDrop.style.setProperty("--height", `${height}px`);
+      menuBackDrop.style.opacity = "1";
+      menuBackDrop.style.visibility = "visible";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      menuBackDrop.style.opacity = "0";
+      menuBackDrop.style.visibility = "hidden";
+    });
+  });
+
+  window.addEventListener("scroll", () => {
+    const topDistance = window.scrollY;
+    const opacity = Math.min(topDistance / 500, 1);
+    header.style.borderBottom = `4px solid rgba(255, 200, 106, ${opacity})`;
+  });
+</script>

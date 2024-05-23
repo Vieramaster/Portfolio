@@ -1,0 +1,76 @@
+---
+import ButtonContact from "../components/ButtonContact.astro";
+
+//social icos
+
+import LinkedIn from "../icons/SocialIcons/IcoLinkedIn.astro";
+import Github from "../icons/SocialIcons/IcoGithub.astro";
+import Discord from "../icons/SocialIcons/IcoDiscord.astro";
+import Instagram from "../icons/SocialIcons/IcoInstagram.astro";
+
+//misc icos
+
+import IcoArrowDown from "../icons/IconsMisc/IcoArrowDown.astro";
+const classHomeSocial =
+  "transform transition-transform duration-300 group-hover:-translate-x-5";
+---
+
+<section
+  id="Home"
+  class="h-screen w-5/6 m-auto flex align items-center justify-between relative"
+>
+  <div class="w-1/2 h-full flex justify-center place-content-center]">
+    <div class="w-3/4 flex flex-col m-auto">
+      <article>
+        <h1 class="text-7xl font-bold">
+          I'm<span class="text-third-color"> Martin Viera</span>
+        </h1>
+        <div class="w-96">
+          <h3
+            class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-4xl text-first-font font-semibold italic w-80[22rem]"
+          >
+            a frontend developer.
+          </h3>
+        </div>
+      </article>
+      <ButtonContact />
+    </div>
+  </div>
+  <div
+    class="w-1/2 h-full flex items-end justify-end place-content-center relative mb-16"
+  >
+    <img src="" alt="" />
+    <div class="flex flex-col h-3/4 justify-end">
+      <div class="bg-third-color w-2 h-64 mx-auto shadow-custom-shadow"></div>
+      <ul class="flex flex-col gap-2 mt-5">
+        <li>
+          <a href="#" class="group">
+            <LinkedIn class={classHomeSocial + " hover:stroke-third-color"} />
+          </a>
+        </li>
+        <li>
+          <a href="" class="group">
+            <Github class={classHomeSocial + " hover:fill-third-color"} />
+          </a>
+        </li>
+        <li>
+          <a href="" class="group">
+            <Discord class={classHomeSocial + " hover:fill-third-color"} />
+          </a>
+        </li>
+        <li>
+          <a href="#" class="group">
+            <Instagram
+              class={classHomeSocial + " hover:fill-third-color"}
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <a href="#Skills/About" class="absolute bottom-0 left-1/2" name="scroll"
+    ><IcoArrowDown /></a
+  >
+</section>

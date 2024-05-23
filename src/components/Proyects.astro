@@ -1,0 +1,37 @@
+---
+import ProyectCard from "../components/ProyectCard.astro";
+
+// icons type B
+import IcoHTMLB from "../icons/IconsB/IcoHTMLB.astro";
+import IcoCSS3B from "../icons/IconsB/IcoCSS3B.astro";
+import IcoJavasCriptB from "../icons/IconsB/IcoJavasCriptB.astro";
+import IcoReactB from "../icons/IconsB/IcoReactB.astro";
+---
+
+<section
+  id="Proyects"
+  class="h-auto w-5/6 ju flex align items-center m-auto flex-col"
+>
+  <div class="mt-32 flex items-center">
+    <span class="w-60 h-1 bg-third-color mx-10"></span><h2
+      class="text-6xl font-bold"
+    >
+      Portfolio
+    </h2><span class="w-60 h-1 bg-third-color mx-10"></span>
+  </div>
+  <div class="h-auto w-full flex flex-col justify-center items-center">
+    <ProyectCard
+
+      name="Outfitlandia"
+      text="An app designed to solve what many of us struggle with when getting dressed: combining clothes based on a favorite garment. It also guides you when buying clothes if you’re not exactly sure what you need"
+      image="/ImageProyects/Outfitlandia.webp"
+      linkGithub="https://github.com/Vieramaster/Outfitlandia"
+      linkProyect="https://outfitlandia.vercel.app/"
+    >
+      <IcoHTMLB />
+      <IcoCSS3B />
+      <IcoJavasCriptB />
+      <IcoReactB />
+    </ProyectCard>
+  </div>
+</section>
