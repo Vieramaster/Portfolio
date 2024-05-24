@@ -1,5 +1,13 @@
-<button
-  class="border-4 w-2/4 py-3 px-3 border-third-color text-primary-font rounded text-2xl ml-0 mt-5 hover:bg-third-color hover:text-primary-color duration-300 shadow-custom-shadow"
+---
+interface Props {
+value: string
+}
+
+const { value } = Astro.props;
+---
+<a href="#footer"
+  {...Astro.props}
+  class={ value + " border-4 py-3 px-4 border-third-color text-primary-font rounded text-2xl  hover:bg-third-color hover:text-primary-color duration-300 shadow-custom-shadow text-center"}
 >
   Contact me
-</button>
+</a>

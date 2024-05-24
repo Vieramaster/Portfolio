@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+
+	<g fill="#ffc86a">
+		<path
+		
+			fill-opacity=".2"
+			d="M8.53 5 8 11H7l.53-6h1Z"
+		/>
+		<path
+			
+			fill-opacity=".3"
+			d="m9.07 5-1.05 6H7l1.06-6h1.01Z"
+		/>
+		<path
+		
+			fill-opacity=".4"
+			d="m9.64 5-1.6 6H7l1.6-6h1.04Z"
+		/>
+		<path
+			
+			fill-opacity=".5"
+			d="m10.25 5-2.19 6H7l2.18-6h1.07Z"
+		/>
+		<path
+			
+			fill-opacity=".6"
+			d="m10.9 5-2.8 6H7l2.8-6h1.1Z"
+		/>
+		<path
+			
+			fill-opacity=".7"
+			d="m11.62 5-3.46 6H7l3.46-6h1.16Z"
+		/>
+		<path
+		
+			fill-opacity=".8"
+			d="m12.42 5-4.2 6H7l4.2-6h1.22Z"
+		/>
+		<path
+		
+			fill-opacity=".9"
+			d="M13.34 5 8.3 11H7l5.04-6h1.3Z"
+		/>
+		<path d="m14.41 5-6 6H7l6-6h1.41Z" />
+		<path d="M2 5h1.16L5 8.2 6.84 5H8v6H7V6.73L5 10.2 3 6.73V11H2V5Z" />
+	</g>
+</svg>

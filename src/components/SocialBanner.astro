@@ -1,0 +1,69 @@
+---
+//social icos
+
+import IcoLinkedIn from "../icons/SocialIcons/IcoLinkedIn.astro";
+import IcoGithub from "../icons/SocialIcons/IcoGithub.astro";
+import IcoTelegram from "../icons/SocialIcons/IcoTelegram.astro";
+import IcoInstagram from "../icons/SocialIcons/IcoInstagram.astro";
+
+interface Props {
+  classMain: string;
+  classSpan: string;
+  classList: string;
+  classIco: string;
+  classSpan2: string;
+}
+
+const { classMain, classSpan, classList, classIco ,classSpan2} = Astro.props;
+---
+
+<div class={classMain} {...Astro.props}>
+  <span class={classSpan + " bg-third-color"}></span>
+  <ul class={classList}>
+    <li>
+      <a
+        href="https://www.linkedin.com/in/martin-rodrigo-viera-royer-98a45328a/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group"
+      >
+        <IcoLinkedIn class={classIco + " hover:stroke-third-color"} />
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://github.com/Vieramaster"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group"
+      >
+        <IcoGithub class={classIco + " hover:fill-third-color"} />
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="https://www.instagram.com/martin_viera90/ "
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group"
+      >
+        <IcoInstagram
+          class={classIco + " hover:fill-third-color"}
+          aria-hidden="true"
+        />
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.instagram.com/martin_viera90/ "
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group"
+      >
+        <IcoTelegram class={classIco + " hover:stroke-third-color"} />
+      </a>
+    </li>
+  </ul>
+  <span class={classSpan2 + " bg-third-color"}></span>
+</div>
