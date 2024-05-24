@@ -7,8 +7,12 @@ module.exports = {
   
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/bg-banner.svg')",
+      },
       boxShadow: {
         "custom-shadow": "0px 4px 6px 0px rgba(0, 0, 0, 0.25)",
+        "shadow-skills" : "0px 0px 20px 0px rgba(255,200,106,0.25)"
       },
       fontFamily: {
         serif: ['"Oxanium"', ...defaultTheme.fontFamily.serif],
