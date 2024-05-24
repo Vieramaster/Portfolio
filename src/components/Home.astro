@@ -25,27 +25,27 @@ import IcoArrowDown from "../icons/IconsMisc/IcoArrowDown.astro";
       <ButtonContact value="mt-5 w-1/2" />
     </div>
   </div>
-  <div class="w-1/2 h-full flex justify-between">
-    <div class="w-4/5 h-screen flex items-center justify-center">
-      <img
-        src="photo2.webp"
-        alt="Profile"
-        class="border-solid border-4 border-third-color h-2/4 w-auto"
-      />
-    </div>
-
-    <SocialBanner
-      classMain="flex flex-col h-screen justify-end mr-0 mb-10"
-      classSpan=" w-2 h-64 mx-auto shadow-custom-shadow"
-      classList="flex flex-col gap-2 mt-5 mb-10"
-      classIco="transform transition-transform duration-300 group-hover:-translate-x-5"
-      classSpan2=""
-      ;
+  <div class="w-1/2 h-full flex justify-center items-center relative">
+    <img
+      src="profilePhoto.webp"
+      alt="Profile"
+      class="border-solid border-4 border-third-color h-2/4 w-auto"
     />
   </div>
-
-
+  
+  <SocialBanner
+  classMain=" absolute flex flex-col h-full justify-end   right-0 "
+  classSpan=" w-2 h-64 mx-auto shadow-custom-shadow"
+  classList="flex flex-col gap-2 mt-5 mb-10"
+  classIco="transform transition-transform duration-300 group-hover:-translate-x-5"
+  classSpan2=""
+  ;
+/>
 </section>
-<a href="#Skills/About" class="absolute bottom-0 left-1/2 transform -translate-x-1/2" aria-label="scroll">
+<a
+  href="#Skills/About"
+  class="absolute bottom-0 left-1/2 transform -translate-x-1/2"
+  aria-label="scroll"
+>
   <IcoArrowDown />
 </a>

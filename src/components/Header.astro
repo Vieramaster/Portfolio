@@ -4,8 +4,9 @@ import IcoLogo from "../icons/IconsMisc/IcoLogo.astro";
 
 <header
   id="header"
-  class="w-screen m-auto h-28 flex align items-center justify-around fixed z-50 bg-primary-color border-blue-100-"
+  class="w-screen m-auto h-28  fixed z-50 bg-secondary-color"
 >
+ <div class="w-5/6 h-full flex align items-center justify-between m-auto">
   <IcoLogo class="w-36"/>
 
   <nav class="flex flex-grow-0 place-content-center">
@@ -16,7 +17,7 @@ import IcoLogo from "../icons/IconsMisc/IcoLogo.astro";
     </ul>
     <span
       id="menu-backdrop"
-      class={`absolute bg-secondary-color backdrop-blur-lg
+      class={`absolute bg-primary-color backdrop-blur-lg
         left-[var(--left)] top-[var(--top)]
         w-[var(--width)] h-[var(--height)]
         transition-all duration-300
@@ -26,6 +27,7 @@ import IcoLogo from "../icons/IconsMisc/IcoLogo.astro";
   </nav>
 
   <span class="relative w-28 h-14 animate-scroll"></span>
+ </div>
 </header>
 
 <script>
