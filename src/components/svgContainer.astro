@@ -1,3 +1,11 @@
-<span class="bg-secondary-color h-28 w-28 grid place-content-center rounded-md hover:shadow-shadow-skills ease-in-out duration-200 group">
+---
+interface Props{
+  margin: string
+}
+const {margin} = Astro.props
+---
+
+<span 
+class=`bg-secondary-color h-20 w-20 grid place-content-center rounded-md hover:shadow-shadow-skills ease-in-out duration-200 group ${margin} sm:w-24 sm:h-24`>
   <slot />
 </span>

@@ -1,0 +1,69 @@
+--
+const ClassIconsA = "transform group-hover:scale-125 ease-in-out duration-200 ";
+---
+
+<section
+  id="Skills/About"
+  class="h-[calc(100vh-7rem)] w-5/6 m-auto flex align items-center justify-between flex-col position relative"
+>
+  <span
+    class="h-20 w-full bg-secondary-color absolute top-0 bg-hero-pattern mt-10"
+  ></span>
+  <section class="mt-44">
+    <h2 class="text-6xl font-bold">About</h2>
+
+    <article class="mt-4 flex gap-4">
+      <div class="w-40 h-1 bg-third-color mt-2"></div>
+      <p class="text-xl">
+        From Argentina, Mar del Plata, I’m a pass ionate frontend developer with
+        a love for turning ideas into functional, user-friendly web experiences.
+        Programming isn’t just a hobby—it’s a rewarding journey of continuous <span
+          class="text-third-color"
+          >learning, problem-solving, and creativity</span
+        >. I thrive on challenges and aspire to contribute my skills to
+        meaningful projects. Let’s build something great together!
+      </p>
+    </article>
+  </section>
+  <div>
+    <h2 class="text-4xl font-bold text-center mb-10">Skills</h2>
+    <div class="flex justify-center gap-20">
+      <SvgContainer>
+        <IcoHTMLA class={ClassIconsA} />
+      </SvgContainer>
+      <SvgContainer>
+        <IcoCSS3A class={ClassIconsA} />
+      </SvgContainer>
+      <SvgContainer>
+        <IcoJavasCriptA class={ClassIconsA} />
+      </SvgContainer>
+      <SvgContainer>
+        <IcoReactA class={ClassIconsA} />
+      </SvgContainer>
+      <SvgContainer>
+        <IcoTailwindA class={ClassIconsA} />
+      </SvgContainer>
+      <SvgContainer>
+        <IcoAstroA class={ClassIconsA} />
+      </SvgContainer>
+    </div>
+  </div>
+  <div>
+    <h2 class="text-4xl font-bold text-center mb-10">
+      what I am currently studying
+    </h2>
+
+    <div class="flex justify-center gap-20 ">
+      <SvgContainer>
+        <IcoReactA class={ClassIconsA} />
+        <p class="transform group-hover:scale-125 group-hover:mt-2 ease-in-out duration-200 text-center">Native</p>
+      </SvgContainer>
+      <SvgContainer>
+        <IcoTypesCriptA class={ClassIconsA} />
+      </SvgContainer>
+      <SvgContainer>
+        <IcoWordpressA class={ClassIconsA} />
+      </SvgContainer>
+    </div>
+  </div>
+</section>

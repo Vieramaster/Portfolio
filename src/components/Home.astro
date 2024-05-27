@@ -1,51 +1,45 @@
 ---
 import ButtonContact from "../components/ButtonContact.astro";
 import SocialBanner from "./SocialBanner.astro";
-import IcoArrowDown from "../icons/IconsMisc/IcoArrowDown.astro";
+import ArrowButton from "./ArrowButton.astro";
 ---
 
 <section
   id="Home"
-  class="h-screen w-5/6 m-auto flex align items-center justify-between relative"
+  class="w-screen flex flex-col h-[700px] sm:h-[800px] lg:h-screen lg:flex-row lg:justify-center 2xl:w-5/6 2xl:m-auto"
 >
-  <div class="w-1/2 h-full flex items-center">
-    <div class="w-3/4 h-1/2 flex flex-col justify-center items-start m-auto">
-      <article>
-        <h1 class="text-7xl font-bold">
-          I'm<span class="text-third-color"> Martín Viera</span>
-        </h1>
-        <div class="w-96">
-          <h3
-            class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-4xl text-first-font font-semibold italic w-80[22rem]"
-          >
-            a frontend developer.
-          </h3>
-        </div>
-      </article>
-      <ButtonContact value="mt-5 w-1/2" />
+  <div
+    class="w-full h-1/2 flex flex-col justify-center items-center lg:h-screen"
+  >
+    <h1 class=" w-auto text-4xl font-bold px-2 py-3 mt-20 sm:text-6xl xl:text-7xl">
+      I'm <span class="text-third-color">Martín Viera</span>
+    </h1>
+    <div class="w-auto flex ml-5 ">
+      <h3
+        class=" w-auto animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-xl text-first-font font-semibold italic sm:text-3xl lg:text-4xl"
+      >
+        a frontend developer.
+      </h3>
     </div>
+    <ButtonContact value="mt-5 w-56 lg:w-72" />
   </div>
-  <div class="w-1/2 h-full flex justify-center items-center relative">
+
+  <div
+    class="w-full h-1/2 flex flex-col items-center justify-center gap-5 lg:h-screen"
+  >
     <img
       src="profilePhoto.webp"
       alt="Profile"
-      class="border-solid border-4 border-third-color h-2/4 w-auto"
+      class="border-solid border-4 border-third-color w-auto h-60 rounded mt-0 sm:h-80 lg:h-96 2xl:h-[30rem]"
+    />
+    <SocialBanner
+      classMain=" h-auto w-auto flex items-center relative  gap-2 lg:absolute lg:bottom-24 lg:transform lg:-translate-x-1/2 lg:left-1/2"
+      classSpan="rounded w-12 h-1 bg-third-color lg:w-64"
+      classList="flex items-center gap-2 "
+      classIco="transform transition-transform duration-300 sm:group-hover:-translate-y-3"
+      classSpan2=" rounded w-12 h-1 bg-third-color lg:w-64 "
+      ;
     />
   </div>
-  
-  <SocialBanner
-  classMain=" absolute flex flex-col h-full justify-end   right-0 "
-  classSpan=" w-2 h-64 mx-auto shadow-custom-shadow"
-  classList="flex flex-col gap-2 mt-5 mb-10"
-  classIco="transform transition-transform duration-300 group-hover:-translate-x-5"
-  classSpan2=""
-  ;
-/>
+  <ArrowButton href="#Skills/About" bottom="bottom-4"/>
 </section>
-<a
-  href="#Skills/About"
-  class="absolute bottom-0 left-1/2 transform -translate-x-1/2"
-  aria-label="scroll"
->
-  <IcoArrowDown />
-</a>

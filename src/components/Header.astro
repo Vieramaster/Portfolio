@@ -1,33 +1,64 @@
 ---
 import IcoLogo from "../icons/IconsMisc/IcoLogo.astro";
+import IcoOpen from "../icons/IconsMisc/IcoOpen.astro";
+import IcoClose from "../icons/IconsMisc/IcoClose.astro";
 ---
 
-<header
-  id="header"
-  class="w-screen m-auto h-28  fixed z-50 bg-secondary-color"
->
- <div class="w-5/6 h-full flex align items-center justify-between m-auto">
-  <IcoLogo class="w-36"/>
+<header id="header" class="w-screen h-20 fixed z-50 bg-secondary-color xl:h-28">
+  <div
+    class="flex justify-between w-full h-full items-center xl:w-5/6 xl:m-auto lg:px-10 2xl:w-5/6 2xl:px-0 "
+  >
+    <img src="logo.webp" alt="logo" class="h-12 ml-4 my-auto" />
 
-  <nav class="flex flex-grow-0 place-content-center">
-    <ul class="flex text-2xl [&>li>a]:inline-block [&>li>a]:px-6 [&>li>a]:py-3">
-      <li><a href="#Home">Home</a></li>
-      <li><a href="#Skills/About">Skills / About</a></li>
-      <li><a href="#Proyects">Proyects</a></li>
-    </ul>
-    <span
-      id="menu-backdrop"
-      class={`absolute bg-primary-color backdrop-blur-lg
-        left-[var(--left)] top-[var(--top)]
-        w-[var(--width)] h-[var(--height)]
-        transition-all duration-300
-        ease-in-out  opacity-0 -z-10 rounded-md`}
+    <button
+      class="grid place-content-center w-20 h-20 mr-0 md:hidden"
+      id="openButton"
     >
-    </span>
-  </nav>
+      <IcoOpen class="w-16 h-16" />
+    </button>
 
-  <span class="relative w-28 h-14 animate-scroll"></span>
- </div>
+    <nav
+      id="navBar"
+      class="border-l border-third-color bg-secondary-color absolute top-0 w-2/3 -right-full h-screen flex flex-col justify-between ease-in-out duration-300 
+      md:relative md:right-0  md:w-auto md:h-full md:border-none md:bg-transparent md:top-auto"
+     >
+      <div class="w-full h-20 flex flex-row-reverse md:hidden">
+        <button class="w-20 h-20 place-content-center" id="closeButton">
+          <IcoClose class="w-full h-full" />
+        </button>
+      </div>
+
+      <ul
+        class="flex gap-10 flex-col items-center flex-auto place-content-center md:flex-row md:h-full md:gap-0 " 
+      >
+        <li class="text-2xl font-semibold md:px-6 md:py-3 ">
+          <a href="#Home"
+            >Home</a
+          >
+        </li>
+        <li class="text-2xl font-semibold md:px-6 md:py-3">
+          <a
+            href="#Skills/About"
+            >Skills / About</a
+          >
+        </li>
+        <li class="text-2xl font-semibold md:px-6 md:py-3">
+          <a href="#Proyects" 
+            >Proyects</a
+          >
+        </li>
+      </ul>
+      <span
+        id="menu-backdrop"
+        class={`absolute bg-primary-color backdrop-blur-lg
+          left-[var(--left)] top-[var(--top)]
+          w-[var(--width)] h-[var(--height)]
+          transition-all duration-300
+          ease-in-out  opacity-0 -z-10 rounded-md`}
+      >
+      </span>
+    </nav>
+  </div>
 </header>
 
 <script>
@@ -36,25 +67,58 @@ import IcoLogo from "../icons/IconsMisc/IcoLogo.astro";
   const header = document.querySelector("#header") as HTMLElement;
 
   listItem.forEach((item) => {
-    item.addEventListener("mouseenter", (event) => {
-      const { left, top, width, height } = event.target.getBoundingClientRect();
-      menuBackDrop.style.setProperty("--left", `${left}px`);
-      menuBackDrop.style.setProperty("--top", `${top}px`);
-      menuBackDrop.style.setProperty("--width", `${width}px`);
-      menuBackDrop.style.setProperty("--height", `${height}px`);
-      menuBackDrop.style.opacity = "1";
-      menuBackDrop.style.visibility = "visible";
-    });
-
-    item.addEventListener("mouseleave", () => {
-      menuBackDrop.style.opacity = "0";
-      menuBackDrop.style.visibility = "hidden";
-    });
+  item.addEventListener("mouseenter", function() {
+    const { left, top, width, height } = this.getBoundingClientRect();
+    const containerLeft = this.offsetParent.getBoundingClientRect().left;
+    const relativeLeft = left - containerLeft;
+    menuBackDrop.style.setProperty("--left", ` ${relativeLeft}px`);
+    menuBackDrop.style.setProperty("--top", `${top}px`);
+    menuBackDrop.style.setProperty("--width", `${width}px`);
+    menuBackDrop.style.setProperty("--height", `${height}px`);
+    menuBackDrop.style.opacity = "1";
+    menuBackDrop.style.visibility = "visible";
   });
+
+  item.addEventListener("mouseleave", () => {
+    menuBackDrop.style.opacity = "0";
+    menuBackDrop.style.visibility = "hidden";
+  });
+});
+
 
   window.addEventListener("scroll", () => {
     const topDistance = window.scrollY;
     const opacity = Math.min(topDistance / 500, 0.5);
     header.style.borderBottom = `4px solid rgba(255, 200, 106, ${opacity})`;
+  });
+  const navBar = document.querySelector("#navBar");
+  const openButton = document.querySelector("#openButton");
+  const closeButton = document.querySelector("#closeButton");
+
+  openButton.addEventListener("click", () => {
+    navBar.classList.remove("hidden");
+    setTimeout(() => {
+      navBar.classList.remove("-right-full");
+      navBar.classList.add("flex", "right-0");
+    }, 100);
+  });
+
+  closeButton.addEventListener("click", () => {
+    navBar.classList.add("-right-full");
+
+    setTimeout(() => {
+      navBar.classList.remove("flex", "right-0");
+      navBar.classList.add("hidden");
+    }, 100);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+      navBar.classList.remove("-right-full", "hidden");
+      navBar.classList.add("flex", "right-5");
+    } else {
+      navBar.classList.remove("flex", "right-5");
+      navBar.classList.add("hidden", "-right-full");
+    }
   });
 </script>

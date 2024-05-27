@@ -1,0 +1,17 @@
+---
+import IcoArrowDown from "../icons/IconsMisc/IcoArrowDown.astro"
+
+interface Props{
+  href: string
+  bottom: string
+}
+const {href, bottom} = Astro.props
+---
+
+<a
+  href={href}
+  class={`hidden absolute  left-1/2 transform  -translate-x-1/2 lg:flex ${bottom}`}
+  aria-label="scroll"
+>
+  <IcoArrowDown />
+</a>
