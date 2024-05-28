@@ -1,26 +1,18 @@
----
-const props = Astro.props;
----
-
 <svg
+  {...Astro.props}
   xmlns="http://www.w3.org/2000/svg"
-  width="2.4rem"
+  width="2.5rem"
 
-  viewBox="0 0 48 48"
-  {...props}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-link"
+  ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 15l6 -6"
+  ></path><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"
+  ></path><path
+    d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"
+  ></path></svg
 >
-  <g
-    fill="none"
-    stroke="currentColor"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    stroke-width="4"
-  >
-    <path
-      d="m26.24 16.373l-9.14-9.14c-2.661-2.661-7.035-2.603-9.768.131c-2.734 2.734-2.793 7.107-.131 9.769l7.935 7.935m17.767-2.065l7.935 7.935c2.661 2.662 2.603 7.035-.13 9.769c-2.735 2.734-7.108 2.792-9.77.13l-9.14-9.14"
-    ></path>
-    <path
-      d="M26.11 26.142c2.733-2.734 2.792-7.108.13-9.769m-4.441 5.425c-2.734 2.734-2.792 7.108-.131 9.769"
-    ></path>
-  </g>
-</svg>
