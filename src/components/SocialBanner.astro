@@ -6,20 +6,22 @@ import IcoGithub from "../icons/SocialIcons/IcoGithub.astro";
 import IcoTelegram from "../icons/SocialIcons/IcoTelegram.astro";
 import IcoInstagram from "../icons/SocialIcons/IcoInstagram.astro";
 
+const classIco =
+  "transform transition-transform duration-300 sm:group-hover:-translate-y-3";
+
 interface Props {
-  classMain: string;
-  classSpan: string;
-  classList: string;
-  classIco: string;
-  classSpan2: string;
+  span: string;
+  position: string;
 }
 
-const { classMain, classSpan, classList, classIco ,classSpan2} = Astro.props;
+const { span, position } = Astro.props;
 ---
 
-<div class={classMain} {...Astro.props}>
-  <span class={classSpan + " bg-third-color"}></span>
-  <ul class={classList}>
+<div
+  class=`h-auto w-auto flex items-center gap-2  ${position}`
+>
+  <span class={span}></span>
+  <ul class="flex items-center gap-2">
     <li>
       <a
         href="https://www.linkedin.com/in/martin-rodrigo-viera-royer-98a45328a/"
@@ -65,5 +67,5 @@ const { classMain, classSpan, classList, classIco ,classSpan2} = Astro.props;
       </a>
     </li>
   </ul>
-  <span class={classSpan2 + " bg-third-color"}></span>
+  <span class={span}></span>
 </div>

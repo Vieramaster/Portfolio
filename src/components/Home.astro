@@ -11,12 +11,14 @@ import ArrowButton from "./ArrowButton.astro";
   <div
     class="w-full h-1/2 flex flex-col justify-center items-center lg:h-screen"
   >
-    <h1 class=" w-auto text-4xl font-bold px-2 py-3 mt-20 sm:text-6xl xl:text-7xl">
+    <h1
+      class="w-auto text-4xl font-bold px-2 py-3 mt-20 sm:text-6xl xl:text-7xl"
+    >
       I'm <span class="text-third-color">Martín Viera</span>
     </h1>
-    <div class="w-auto flex ml-5 ">
+    <div class="w-auto flex ml-5">
       <h3
-        class=" w-auto animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-xl text-first-font font-semibold italic sm:text-3xl lg:text-4xl"
+        class="w-auto animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-xl text-first-font font-semibold italic sm:text-3xl lg:text-4xl"
       >
         a frontend developer.
       </h3>
@@ -33,13 +35,9 @@ import ArrowButton from "./ArrowButton.astro";
       class="border-solid border-4 border-third-color w-auto h-60 rounded mt-0 sm:h-80 lg:h-96 2xl:h-[30rem]"
     />
     <SocialBanner
-      classMain=" h-auto w-auto flex items-center relative  gap-2 lg:absolute lg:bottom-24 lg:transform lg:-translate-x-1/2 lg:left-1/2"
-      classSpan="rounded w-12 h-1 bg-third-color lg:w-64"
-      classList="flex items-center gap-2 "
-      classIco="transform transition-transform duration-300 sm:group-hover:-translate-y-3"
-      classSpan2=" rounded w-12 h-1 bg-third-color lg:w-64 "
-      ;
+      position="relative lg:absolute  lg:transform lg:-translate-x-1/2 lg:left-1/2 lg:bottom-24 "
+      span="rounded w-12 h-1 bg-third-color lg:w-64  bg-third-color"
     />
   </div>
-  <ArrowButton href="#Skills/About" bottom="bottom-4"/>
+  <ArrowButton href="#Skills/About" bottom="bottom-4" />
 </section>

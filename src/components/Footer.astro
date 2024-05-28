@@ -1,27 +1,40 @@
 ---
-import ButtonContact from "./ButtonContact.astro";
 import SocialBanner from "./SocialBanner.astro";
+import IcoAstroB from "../icons/IconsB/IcoAstroB.astro";
+import IcoTailwindB from "../icons/IconsB/IcoTailwindB.astro";
 ---
 
-<footer class="flex w-full h-96 bg-secondary-color " id="footer">
-  <div class="w-1/2 h-full items-center place-content-center">
-    <h2 class="text-7xl font-bold text-third-color text-center my-10">
-       Martín <span class="text-primary-font">Viera</span>
+<footer id="Footer"
+  class="flex flex-col h-[40rem] w-full bg-secondary-color   pt-10 lg:pt-5 lg:h-[24rem] lg:flex-row"
+>
+  <div
+    class="w-full h-1/3 flex flex-col items-center justify-center gap-3 lg:w-1/2 lg:h-full"
+  >
+    <h2 class="font-bold text-4xl text-third-color">
+      Martín <span class="text-primary-font">Viera</span>
     </h2>
-    <SocialBanner
-      classMain="flex  place-content-center gap-5 items-center "
-      classSpan=" h-2 w-1/4 bg-third-color"
-      classList="flex gap-3 items-center"
-      classIco="transform transition-transform duration-300 group-hover:-translate-y-2"
-      classSpan2="h-2 w-1/4 bg-third-color"
-    />
-
+    <SocialBanner position="" span="rounded w-12 h-1 bg-third-color  lg:w-20 2xl:w-36" />
+    <p class="text-primary-color font-bold text-xl">
+      This portfolio was created with
+    </p>
+    <div class="flex">
+      <IcoTailwindB class="stroke-primary-color fill-primary-color" /><IcoAstroB
+        class="stroke-primary-color fill-primary-color"
+      />
+    </div>
   </div>
 
-  <div class="w-1/2 h-full flex justify-center items-center flex-col">
-    <h2 class="text-third-color font-bold text-3xl my-5 ml-0">Contact me</h2>
+  <div
+    class="w-full h-2/3 flex justify-center items-center flex-col lg:w-1/2 lg:h-full"
+  >
+    <h2 class="text-third-color font-bold text-3xl my-5 ml-0 lg:my-0">Contact me</h2>
     <fieldset class="w-1/2 text-primary-color font-semibold">
-      <form action="https://formsubmit.co/martin_viera90@hotmail.com" method="POST" aria-label="formulary" class="flex flex-col gap-2 ">
+      <form
+        action="https://formsubmit.co/martin_viera90@hotmail.com"
+        method="POST"
+        aria-label="formulary"
+        class="flex flex-col gap-2"
+      >
         <input
           type="text"
           aria-label="input name"
@@ -37,20 +50,21 @@ import SocialBanner from "./SocialBanner.astro";
           name="email"
           placeholder="enter your E-mail..."
           class="rounded h-10 px-5 bg-primary-font focus:outline-none focus:ring-0"
-          
         />
         <textarea
           name="textarea"
           id=""
           placeholder="Enter your message..."
           rows="4"
-          class="px-5 py-2 rounded bg-primary-font resize-none focus:outline-none focus:ring-0"></textarea>
+          class="px-5 py-2 rounded bg-primary-font resize-none focus:outline-none focus:ring-0"
+        ></textarea>
         <button
           type="submit"
-          class="px-3 py-1 h-10 rounded items-end ml-auto text-third-color text-3xl font-bold border-none "
-          > Send →</button
+          class="px-3 py-1 h-10 rounded items-end ml-auto text-third-color text-3xl font-bold border-none"
         >
-        <input type="hidden" name="_next" value="https://martinviera.dev/">
+          Send →</button
+        >
+        <input type="hidden" name="_next" value="https://martinviera.dev/" />
       </form>
     </fieldset>
   </div>

@@ -10,35 +10,33 @@ interface Props {
 }
 
 const { name, text, image, linkProyect, linkGithub } = Astro.props;
-const classAnchor = "hover:fill-third-color ease-in-out duration-300";
 ---
 
 <div
-  class="w-3/4 h-80 bg-secondary-color rounded-md flex my-20 overflow-hidden"
+  class="bg-secondary-color flex flex-col gap-5 rounded w-80 h-auto sm:w-96 lg:flex-row lg:h-80 lg:w-[60rem] lg:gap-5"
 >
   <a
-    class="h-full w-96 overflow-hidden cursor-pointer"
+    class="w-full overflow-hidden cursor-pointer lg:h-full"
     href={linkProyect}
     target="_blank"
     rel="noopener noreferrer"
     aria-label="link"
   >
     <img
-      class="h-full hover:scale-105 duration-300 ease-in-out"
+      class="w-full h-full hover:scale-105 duration-300 ease-in-out rounded"
       src=`${image}`
       alt=`${name}`
     />
   </a>
-  <div class="flex flex-col mt-5 ml-5 w-3/5 px-10 py-5">
-    <div class="w-2/5">
-      <h3 class="text-3xl font-semibold border-b-2 border-third-color w-auto">
-        {name}
-      </h3>
-    </div>
-    <p class="h-2/4 place-content-center">
+  <div class="flex flex-col gap-3 lg:gap-3 justify-center">
+    <h3 class="text-3xl font-semibold text-center lg:text-4xl lg:mt-5">
+      {name}
+    </h3>
+    <span class="w-1/2 border-b-2 border-third-color mx-auto"></span>
+    <p class="px-5 text-center">
       {text}
     </p>
-    <div class="flex gap-4 pb-2 items-center">
+    <div class="flex justify-center items-center">
       <a
         href={linkProyect}
         target="_blank"
@@ -57,8 +55,8 @@ const classAnchor = "hover:fill-third-color ease-in-out duration-300";
       </a>
     </div>
 
-    <span class="w-1/2 border-b-2 border-third-color"></span>
-    <div class="flex gap-5 mt-2">
+    <span class="w-2/3 border-b-2 border-third-color mx-auto"></span>
+    <div class="flex gap-5  justify-center pb-3">
       <slot />
     </div>
   </div>

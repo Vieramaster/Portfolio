@@ -1,5 +1,6 @@
 ---
 import ProyectCard from "../components/ProyectCard.astro";
+import SvgContainer from "./svgContainer.astro";
 
 // icons type B
 import IcoHTMLB from "../icons/IconsB/IcoHTMLB.astro";
@@ -10,28 +11,28 @@ import IcoReactB from "../icons/IconsB/IcoReactB.astro";
 
 <section
   id="Proyects"
-  class="h-auto w-5/6 ju flex align items-center m-auto flex-col"
+  class="h-auto w-5/6 ju flex align items-center m-auto flex-col gap-14 mb-24"
 >
-  <div class="mt-32 flex items-center">
-    <span class="w-60 h-1 bg-third-color mx-10"></span><h2
-      class="text-6xl font-bold"
-    >
-      Portfolio
-    </h2><span class="w-60 h-1 bg-third-color mx-10"></span>
+  <span class="h-20 w-full bg-hero-pattern lg:h-28"></span>
+  <div class="flex mt-10 items-center gap-10 justify-center">
+    <span class="rounded w-16 h-1 bg-third-color sm:w-40 lg:w-64 2xl:w-80"
+    ></span>
+    <h2 class="text-3xl font-bold text-center sm:text-4xl xl:text-5xl">
+      Proyects
+    </h2>
+    <span class="rounded w-16 h-1 bg-third-color sm:w-40 lg:w-64 2xl:w-80"
+    ></span>
   </div>
-  <div class="h-auto w-full flex flex-col justify-center items-center">
-    <ProyectCard
-
-      name="Outfitlandia"
-      text="An app designed to solve what many of us struggle with when getting dressed: combining clothes based on a favorite garment. It also guides you when buying clothes if you’re not exactly sure what you need"
-      image="/ImageProyects/Outfitlandia.webp"
-      linkGithub="https://github.com/Vieramaster/Outfitlandia"
-      linkProyect="https://outfitlandia.vercel.app/"
-    >
-      <IcoHTMLB />
-      <IcoCSS3B />
-      <IcoJavasCriptB />
-      <IcoReactB />
-    </ProyectCard>
-  </div>
+  <ProyectCard
+    name="Outfitlandia"
+    text="An app designed to solve what many of us struggle with when getting dressed: combining clothes based on a favorite garment. It also guides you when buying clothes if you’re not exactly sure what you need"
+    image="/ImageProyects/Outfitlandia.webp"
+    linkGithub="https://github.com/Vieramaster/Outfitlandia"
+    linkProyect="https://outfitlandia.vercel.app/"
+  >
+    <IcoHTMLB />
+    <IcoCSS3B />
+    <IcoJavasCriptB />
+    <IcoReactB />
+  </ProyectCard>
 </section>
