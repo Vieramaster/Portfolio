@@ -6,7 +6,7 @@ import IcoClose from "../icons/IconsMisc/IcoClose.astro";
 
 <header id="header" class="w-screen h-20 fixed z-50 bg-secondary-color xl:h-28">
   <div
-    class="flex justify-between w-full h-full items-center xl:w-5/6 xl:m-auto lg:px-10 2xl:w-5/6 2xl:px-0 "
+    class="flex justify-between w-full h-full items-center xl:w-5/6 xl:m-auto lg:px-10 2xl:w-5/6 2xl:px-0"
   >
     <img src="logo.webp" alt="logo" class="h-12 ml-4 my-auto" />
 
@@ -19,9 +19,9 @@ import IcoClose from "../icons/IconsMisc/IcoClose.astro";
 
     <nav
       id="navBar"
-      class="border-l border-third-color bg-secondary-color absolute top-0 w-2/3 -right-full h-screen flex flex-col justify-between ease-in-out duration-300 
-      md:relative md:right-0  md:w-auto md:h-full md:border-none md:bg-transparent md:top-auto"
-     >
+      class="border-l border-third-color bg-secondary-color absolute top-0 w-2/3 -right-full h-screen flex flex-col justify-between ease-in-out duration-300
+      md:relative md:right-0 md:w-auto md:h-full md:border-none md:bg-transparent md:top-auto"
+    >
       <div class="w-full h-20 flex flex-row-reverse md:hidden">
         <button class="w-20 h-20 place-content-center" id="closeButton">
           <IcoClose class="w-full h-full" />
@@ -29,23 +29,16 @@ import IcoClose from "../icons/IconsMisc/IcoClose.astro";
       </div>
 
       <ul
-        class="flex gap-10 flex-col items-center flex-auto place-content-center md:flex-row md:h-full md:gap-0 " 
+        class="flex gap-10 flex-col items-center flex-auto place-content-center md:flex-row md:h-full md:gap-0"
       >
-        <li class="text-2xl font-semibold md:px-6 md:py-3 ">
-          <a href="#Home"
-            >Home</a
-          >
+        <li class="text-2xl font-semibold md:px-6 md:py-3">
+          <a href="#Home">Home</a>
         </li>
         <li class="text-2xl font-semibold md:px-6 md:py-3">
-          <a
-            href="#Skills/About"
-            >Skills / About</a
-          >
+          <a href="#Skills/About">Skills / About</a>
         </li>
         <li class="text-2xl font-semibold md:px-6 md:py-3">
-          <a href="#Proyects" 
-            >Proyects</a
-          >
+          <a href="#Proyects">Proyects</a>
         </li>
       </ul>
       <span
@@ -67,24 +60,23 @@ import IcoClose from "../icons/IconsMisc/IcoClose.astro";
   const header = document.querySelector("#header") as HTMLElement;
 
   listItem.forEach((item) => {
-  item.addEventListener("mouseenter", function() {
-    const { left, top, width, height } = this.getBoundingClientRect();
-    const containerLeft = this.offsetParent.getBoundingClientRect().left;
-    const relativeLeft = left - containerLeft;
-    menuBackDrop.style.setProperty("--left", ` ${relativeLeft}px`);
-    menuBackDrop.style.setProperty("--top", `${top}px`);
-    menuBackDrop.style.setProperty("--width", `${width}px`);
-    menuBackDrop.style.setProperty("--height", `${height}px`);
-    menuBackDrop.style.opacity = "1";
-    menuBackDrop.style.visibility = "visible";
-  });
+    item.addEventListener("mouseenter", function () {
+      const { left, top, width, height } = this.getBoundingClientRect();
+      const containerLeft = this.offsetParent.getBoundingClientRect().left;
+      const relativeLeft = left - containerLeft;
+      menuBackDrop.style.setProperty("--left", ` ${relativeLeft}px`);
+      menuBackDrop.style.setProperty("--top", `${top}px`);
+      menuBackDrop.style.setProperty("--width", `${width}px`);
+      menuBackDrop.style.setProperty("--height", `${height}px`);
+      menuBackDrop.style.opacity = "1";
+      menuBackDrop.style.visibility = "visible";
+    });
 
-  item.addEventListener("mouseleave", () => {
-    menuBackDrop.style.opacity = "0";
-    menuBackDrop.style.visibility = "hidden";
+    item.addEventListener("mouseleave", () => {
+      menuBackDrop.style.opacity = "0";
+      menuBackDrop.style.visibility = "hidden";
+    });
   });
-});
-
 
   window.addEventListener("scroll", () => {
     const topDistance = window.scrollY;

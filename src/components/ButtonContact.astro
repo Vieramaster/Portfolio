@@ -1,13 +1,16 @@
 ---
 interface Props {
-value: string
+  value: string;
 }
 
 const { value } = Astro.props;
 ---
-<a href="#Footer"
+
+<a
+  href="#Footer"
   {...Astro.props}
-  class={ value + " border-4 py-3 px-4 border-third-color text-primary-font rounded text-2xl  hover:bg-third-color hover:text-primary-color duration-300 shadow-custom-shadow text-center transform active:translate-y-1"}
+  class={value +
+    " border-4 py-3 px-4 border-third-color text-primary-font rounded text-2xl  hover:bg-third-color hover:text-primary-color duration-300 shadow-custom-shadow text-center transform active:translate-y-1"}
 >
   Contact me
 </a>
