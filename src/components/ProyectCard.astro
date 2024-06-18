@@ -16,7 +16,7 @@ const { name, text, image, linkProyect, linkGithub } = Astro.props;
   class="bg-secondary-color flex flex-col gap-5 rounded w-80 h-auto sm:w-96 lg:flex-row lg:h-80 lg:w-[60rem] lg:gap-5"
 >
   <a
-    class="w-full overflow-hidden cursor-pointer lg:h-full"
+    class="w-full overflow-hidden cursor-pointer lg:h-full lg:w-2/5 rounded"
     href={linkProyect}
     target="_blank"
     rel="noopener noreferrer"
@@ -28,11 +28,11 @@ const { name, text, image, linkProyect, linkGithub } = Astro.props;
       alt=`${name}`
     />
   </a>
-  <div class="flex flex-col gap-3 lg:gap-3 justify-center">
+  <div class="flex flex-col gap-3 lg:gap-3 justify-center lg:w-3/5">
     <h3 class="text-3xl font-semibold text-center lg:text-4xl lg:mt-5">
       {name}
     </h3>
-    <span class="w-1/2 border-b-2 border-third-color mx-auto"></span>
+    <span class="w-1/2 border-b-2 border-third-color mx-auto "></span>
     <p class="px-5 text-center">
       {text}
     </p>
