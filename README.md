@@ -17,7 +17,7 @@ Personal site built with **Astro** and **Tailwind CSS**. Focused on performance,
 - **Astro**
 - **Tailwind CSS**
 
-📁 Project Structure
+## 📁 Project Structure
 
 ```
 /
@@ -32,7 +32,7 @@ Personal site built with **Astro** and **Tailwind CSS**. Focused on performance,
 ```
 
 
-♿ Accessibility
+## ♿ Accessibility
 
 • Proper use of role, aria-\*, and associated labels
 
@@ -42,7 +42,7 @@ Personal site built with **Astro** and **Tailwind CSS**. Focused on performance,
 
 • Strong contrast and consistent heading hierarchy
 
-🐛 Issues & Feedback
+## 🐛 Issues & Feedback
 
 Open an issue on GitHub for bugs or suggestions.
 
