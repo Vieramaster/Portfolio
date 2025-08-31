@@ -1,5 +1,3 @@
-# English Version
-
 # Portfolio — Frontend Developer
 
 Personal site built with **Astro** and **Tailwind CSS**. Focused on performance, accessibility, and clear code.
@@ -30,20 +28,14 @@ Personal site built with **Astro** and **Tailwind CSS**. Focused on performance,
 ├─ public/          # Static assets
 └─ astro.config.mjs
 ```
-
-
 ## ♿ Accessibility
 
-• Proper use of role, aria-\*, and associated labels
-
-• Modal/carousel with managed focus and minimal announcements
-
-• Respects prefers-reduced-motion
-
-• Strong contrast and consistent heading hierarchy
+- **Proper use of role, aria-\*, and associated labels**
+- **Modal/carousel with managed focus and minimal announcements**
+- **Respects prefers-reduced-motion**
+- **Strong contrast and consistent heading hierarchy**
 
 ## 🐛 Issues & Feedback
 
-Open an issue on GitHub for bugs or suggestions.
-
-Built with Astro and care, prioritizing simplicity and performance.
+-**Open an issue on GitHub for bugs or suggestions.**
+-**Built with Astro and care, prioritizing simplicity and performance.**
