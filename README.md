@@ -37,5 +37,5 @@ Personal site built with **Astro** and **Tailwind CSS**. Focused on performance,
 
 ## 🐛 Issues & Feedback
 
--**Open an issue on GitHub for bugs or suggestions.**
--**Built with Astro and care, prioritizing simplicity and performance.**
+- **Open an issue on GitHub for bugs or suggestions.**
+- **Built with Astro and care, prioritizing simplicity and performance.**
