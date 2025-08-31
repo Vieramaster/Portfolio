@@ -1,0 +1,38 @@
+---
+// @ts-check
+import ArrowButton from "../ui/ArrowButton.astro";
+import ProjectCard from "../ui/ProjectCard.astro";
+import ALL_PROJECTS from "../../data/ALL_PROJECTS";
+---
+
+<div
+  role="region"
+  aria-roledescription="carousel"
+  aria-label="Projects"
+  aria-live="polite"
+  aria-current="true"
+  class="card relative overflow-hidden
+         w-[20rem] h-[38rem]
+         md:w-auto md:h-auto
+         md:col-start-2 md:row-[6/14]
+         xl:col-start-3 xl:row-[5/14]"
+>
+  <ul
+    id="carousel"
+    role="list"
+    class="h-full flex transition-transform duration-500 will-change-transform"
+  >
+    {ALL_PROJECTS.map((items) => <ProjectCard {...items} />)}
+  </ul>
+
+  <ArrowButton buttonID="leftButton" />
+  <ArrowButton buttonID="rightButton" right />
+</div>
+<script>
+  import { infinitCarousel } from "../../scripts/infinitCarousel";
+  infinitCarousel({
+    carousel: document.getElementById("carousel"),
+    leftButton: document.getElementById("leftButton"),
+    rightButton: document.getElementById("rightButton"),
+  });
+</script>

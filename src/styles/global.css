@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-VariableFont.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-VariableFont.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Fuentes */
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headings: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  /* fonts */
+  --font-sans: var(--font-body);
+  --font-display: var(--font-headings);
+
+  /* Colores*/
+  --color-background: #2b2b28;
+  --color-card: #3b3b39;
+  --color-modal: #333331;
+  --color-detail: #eab256;
+  --color-detail-700: #cfa148;
+  --color-font: #e5e5e6;
+  --color-font-muted: #b7b7b9;
+  --color-border: #ffffff1a;
+
+  /* Breakpoint extra */
+  --breakpoint-xs: 460px;
+}
+
+/* 4) Base: aplicá colores y fuente al documento */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  @apply bg-background text-font font-sans;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5) Utilidades*/
+@layer utilities {
+  .card {
+    @apply bg-card text-font rounded-lg md:aspect-auto border border-border;
+  }
+  .icons {
+    @apply size-10;
+  }
+  .svgs {
+    @apply duration-300 hover:-translate-y-2 hover:text-detail;
+  }
+  .focus {
+    @apply grid place-items-center rounded-xl
+           focus-visible:outline-none
+           focus-visible:ring-2
+           focus-visible:ring-offset-2
+           focus-visible:ring-detail
+           focus-visible:ring-offset-transparent
+           transition-colors;
+  }
+  .main_title {
+    @apply w-[90%] font-headings whitespace-nowrap text-right font-bold leading-tight tracking-tight  text-[clamp(1rem,9cqi,3rem)];
+  }
+}
+
+.text_shadow {
+  -webkit-text-stroke: 1px rgb(105, 105, 105);
+}

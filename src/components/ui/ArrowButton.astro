@@ -1,0 +1,22 @@
+---
+import ArrowIco from "../icons/extras/ArrowIco.astro";
+
+const { right = false, buttonID } = Astro.props;
+---
+
+<button
+  class={` absolute cursor-pointer
+           top-[20%] xl:top-[30%]
+          grid place-items-center rounded-xl
+          focus-visible:outline-none
+          focus-visible:bg-font
+           hover:scale-110 duration-200
+          ${right ? "right-0 rotate-180" : "left-0 "}
+        `}
+  aria-label={right ? "next project" : "previous project"}
+  id={buttonID}
+>
+  <ArrowIco
+    class="size-14 md:size-18 stroke-detail active:stroke-font-muted duration-200"
+  />
+</button>

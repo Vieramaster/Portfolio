@@ -1,0 +1,60 @@
+<form
+  action="https://formsubmit.co/martin_viera90@hotmail.com"
+  method="dialog"
+  method="POST"
+  enctype="text/plain"
+  class="flex flex-col gap-3"
+>
+  <label class="flex flex-col gap-1">
+    <span class="font-semibold">Name</span>
+    <input
+      class="card p-3"
+      type="text"
+      name="name"
+      placeholder="Your name"
+      autocomplete="name"
+      required
+    />
+  </label>
+
+  <label class="flex flex-col gap-1">
+    <span class="font-semibold">Email</span>
+    <input
+      class="card p-3"
+      type="email"
+      name="email"
+      placeholder="you@example.com"
+      autocomplete="email"
+      required
+    />
+  </label>
+
+  <label class="flex flex-col gap-1">
+    <span class="font-semibold">Message</span>
+    <textarea
+      class="card p-3"
+      name="message"
+      rows="5"
+      placeholder="Write your message..."
+      required></textarea>
+  </label>
+
+  <div class="mt-2 flex gap-3 justify-end">
+    <button
+      type="button"
+      popovertarget="contact-modal"
+      popovertargetaction="hide"
+      class="px-4 py-2 rounded-xl hover:text-detail cursor-pointer"
+    >
+      Cancel
+    </button>
+    <button
+      type="submit"
+      class="px-4 py-2 rounded-xl font-semibold cursor-pointer border-2 border-detail
+                   hover:bg-detail hover:text-card duration-300
+                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-detail"
+    >
+      Send
+    </button>
+  </div>
+</form>

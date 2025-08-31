@@ -1,0 +1,20 @@
+---
+import ALL_TECH_ICONS from "../../data/ALL_TECH_ICONS.js";
+---
+
+<ul
+  class="card
+          flex flex-wrap justify-center gap-6 p-5
+          w-[20rem]
+          md:w-auto
+          md:col-start-2 md:row-[5/5] md:p-3 md:gap-0
+          xl:row-[5/7] xl:col-[2/3]"
+>
+  {
+    ALL_TECH_ICONS.map(({ Icon, label }) => (
+      <li title={label} aria-label={label} class="m-auto">
+        <Icon class="size-10 md:size-[clamp(1.75rem,3cqi,3rem)] hover:text-detail duration-300 " />
+      </li>
+    ))
+  }
+</ul>

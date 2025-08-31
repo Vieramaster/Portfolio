@@ -1,0 +1,26 @@
+---
+// @ts-check
+import Photo from "./sections/Photo.astro";
+import AboutMe from "./sections/AboutMe.astro";
+import TechnologiesList from "./sections/TechnologiesList.astro";
+import Projects from "./sections/Projects.astro";
+import SocialMediaList from "./sections/SocialMediaList.astro";
+import Roadmap from "./sections/Roadmap.astro";
+import Contact from "./sections/Contact.astro";
+---
+
+<main
+  class="bg-background min-w-0 xl:max-w-[1920px] xl:max-h-[1080px] mx-auto
+            grid gap-5 p-8 place-content-center
+            md:grid-cols-2 md:[grid-template-rows:repeat(13,60px)]
+            xl:h-dvh xl:grid-cols-3 xl:[grid-template-rows:repeat(15,minmax(0,1fr))]
+            xl:place-content-stretch min-h-[900px]"
+>
+  <Photo />
+  <Contact />
+  <AboutMe />
+  <TechnologiesList />
+  <Projects />
+  <SocialMediaList />
+  <Roadmap />
+</main>

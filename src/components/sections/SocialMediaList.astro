@@ -1,0 +1,23 @@
+---
+import ALL_SOCIAL_MEDIA from "../../data/ALL_SOCIAL_MEDIA";
+import IconLink from "../ui/IconLink.astro";
+---
+
+<nav
+  aria-label="Social media "
+  class="list-none card grid 
+          w-[20rem] h-[4rem]
+          md:w-auto md:h-auto
+          md:col-1 md:row-[13/14]
+          xl:col-start-3 xl:row-[14/16]"
+>
+  <ul class="flex gap-5 justify-center items-center ">
+    {
+      ALL_SOCIAL_MEDIA.map(({ Icon, link, label }) => (
+        <li class="shrink-0 ">
+          <IconLink href={link} Icon={Icon} label={label} isSocial={true} />
+        </li>
+      ))
+    }
+  </ul>
+</nav>

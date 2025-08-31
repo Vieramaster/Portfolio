@@ -1,0 +1,28 @@
+---
+const { href, label, Icon, isSocial = false } = Astro.props;
+
+const socialClass =
+  " cursor-pointer rounded-full  duration-300 hover:-translate-y-1 hover:text-detail ";
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={label}
+  class={`
+        ${isSocial ? "size-10 md:size-11 xl:size-13" : "size-[clamp(1.75rem,5cqi,3.5rem)] md:size-[clamp(1.75rem,4cqi,3.5rem)] lg:md:size-[clamp(1.75rem,2cqi,3.5rem)]"}
+        grid place-items-center rounded-xl
+         focus-visible:outline-none
+         focus-visible:ring-2
+         focus-visible:ring-offset-2
+         focus-visible:ring-detail
+         focus-visible:ring-offset-transparent
+         transition-colors
+         `}
+>
+  <Icon
+    aria-hidden="true"
+    class={`${isSocial && socialClass}  hover:fill-detail duration-200 active:fill-detail-700`}
+  />
+</a>

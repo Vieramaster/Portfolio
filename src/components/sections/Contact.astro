@@ -1,0 +1,22 @@
+---
+import Modal from "../ui/Modal.astro";
+import ContactForm from "../forms/ContactForm.astro";
+---
+
+<button
+  popovertarget="contact-modal"
+  popovertargetaction="show"
+  class="card cursor-pointer !border-4
+        text-xl font-semibold
+      hover:bg-detail hover:text-card duration-300
+        active:translate-y-0.5 active:bg-detail-700
+         w-[20rem] h-[4rem]
+         md:w-auto md:h-auto
+        md:col-1 md:row-[7/8] md:text-2xl
+        xl:row-[14/16] xl:col-span-1 xl:text-3xl"
+  >Contact Me</button
+>
+
+<Modal title="Send me a message" id="contact-modal">
+  <ContactForm />
+</Modal>

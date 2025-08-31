@@ -1,0 +1,43 @@
+---
+import ALL_SKILLS from "../../data/ALL_SKILLS";
+import RoadMapList from "../ui/RoadMapList.astro";
+---
+
+<div
+  class="card w-[20rem] h-auto p-8 flex flex-col gap-5 justify-start
+         md:w-auto md:h-auto
+         md:col-span-1 md:row-[8/13] md:overflow-y-auto
+         xl:col-2 xl:row-[7/16]"
+>
+  <h3
+    class="font-bold text-detail font-headings
+              text-2xl xs:text-3xl xl:text-4xl"
+  >
+    Learning Roadmap
+  </h3>
+
+  <p class="font-semibold mt-3 text-xl">
+    Currently learning:
+    <span class="text-detail">{ALL_SKILLS.currently}</span>
+  </p>
+
+  <div class="mt-3 flex flex-col gap-5">
+    <!-- Frameworks & Libraries -->
+    <RoadMapList
+      title={ALL_SKILLS.Frameworks_and_Libraries.title}
+      arrayList={ALL_SKILLS.Frameworks_and_Libraries.skills}
+    />
+
+    <!-- Architecture & Process -->
+    <RoadMapList
+      title={ALL_SKILLS.Architecture_and_Process.title}
+      arrayList={ALL_SKILLS.Architecture_and_Process.skills}
+    />
+
+    <!-- Deepen React & UX -->
+    <RoadMapList
+      title={ALL_SKILLS.consolidate_learned.title}
+      arrayList={ALL_SKILLS.consolidate_learned.skills}
+    />
+  </div>
+</div>
