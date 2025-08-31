@@ -15,6 +15,7 @@ const { right = false, buttonID } = Astro.props;
         `}
   aria-label={right ? "next project" : "previous project"}
   id={buttonID}
+  aria-controls="carousel"
 >
   <ArrowIco
     class="size-14 md:size-18 stroke-detail active:stroke-font-muted duration-200"
