@@ -73,7 +73,7 @@ body {
            transition-colors;
   }
   .main_title {
-    @apply w-[90%] font-headings whitespace-nowrap text-right font-bold leading-tight tracking-tight  text-[clamp(1rem,9cqi,3rem)];
+    @apply font-headings whitespace-nowrap text-right font-bold leading-tight tracking-tight  text-[clamp(1rem,9cqi,3rem)];
   }
 }
 

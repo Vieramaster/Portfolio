@@ -1,8 +1,6 @@
 <form
-  action="https://formsubmit.co/martin_viera90@hotmail.com"
-  method="dialog"
+  action="https://formspree.io/f/xeorqyyj"
   method="POST"
-  enctype="text/plain"
   class="flex flex-col gap-3"
 >
   <label class="flex flex-col gap-1">
@@ -39,6 +37,12 @@
       required></textarea>
   </label>
 
+  <!-- Opcionales -->
+  <input type="hidden" name="_subject" value="new message" />
+  <input type="hidden" name="_redirect" value="/thanks" />
+  <input type="text" name="_gotcha" style="display:none" autocomplete="off" />
+  <!-- honeypot -->
+
   <div class="mt-2 flex gap-3 justify-end">
     <button
       type="button"
@@ -51,8 +55,8 @@
     <button
       type="submit"
       class="px-4 py-2 rounded-xl font-semibold cursor-pointer border-2 border-detail
-                   hover:bg-detail hover:text-card duration-300
-                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-detail"
+             hover:bg-detail hover:text-card duration-300
+             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-detail"
     >
       Send
     </button>
